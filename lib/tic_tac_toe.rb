@@ -50,6 +50,24 @@ class TicTacToe
       "O"
     end
   end
+  
+  def turn
+    token = current_player
+    input = gets.strip
+    index = input_to_index(input)
+    if valid_move?(index)
+      move(index, token)
+    else
+      until valid_move?(index)
+        input = gets.strip
+        index = input_to_index(input)
+      end
+      move(index, token)
+    end
+  end
+    
+      
+  end
     
   
   
