@@ -40,7 +40,7 @@ class TicTacToe
   end
   
   def turn_count
-    @board.count{
+    @board.count{|token| 
   end
     
   
